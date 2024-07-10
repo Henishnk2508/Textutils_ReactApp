@@ -20,10 +20,7 @@ export default function TextForm(props) {
     props.showAlert("Text is Cleared", "success");
   };
   const handleCopyClick = () => {
-    var text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
+    navigator.clipboard.writeText(text);
     props.showAlert("Copied to Clipboard", "success");
   };
 
