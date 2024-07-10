@@ -25,10 +25,12 @@ export default function TextForm(props) {
   };
 
   const handleExtraSpaces = () => {
+    // Remove extra spaces
     let newText = text.replace(/\s+/g, " ");
-    setText(newText.join(" "));
+    setText(newText); 
     props.showAlert("Extra Spaces Removed", "success");
-  }
+  };
+
 
   const handleOnChange = (event) => {
     setText(event.target.value);
