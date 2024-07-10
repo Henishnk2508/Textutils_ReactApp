@@ -23,7 +23,6 @@ export default function About(props) {
               aria-controls="collapseOne"
             >
               <strong>Analyze Your Text</strong>
-              ::after
             </button>
           </h2>
           <div

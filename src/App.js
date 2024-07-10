@@ -6,6 +6,7 @@ import TextForm from "./components/TextForm";
 import { useState } from "react";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
@@ -38,7 +39,7 @@ function App() {
           <Alert alert={alert} />
           <Routes>
             <Route
-              path="/"
+              exact path="/"
               element={
                 <TextForm
                   showAlert={showAlert}
@@ -47,7 +48,7 @@ function App() {
                 />
               }
             />
-            <Route path="/about" element={<About mode={mode} />} />
+            <Route exact path="/about" element={<About mode={mode} />} />
           </Routes>
         </div>
       </Router>
