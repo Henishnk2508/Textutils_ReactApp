@@ -33,14 +33,23 @@ function App() {
   return (
     <>
       <Router>
-      <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
-      <div className="container my-3">
-      <Alert alert={alert} />
+        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+        <div className="container my-3">
+          <Alert alert={alert} />
           <Routes>
-            <Route path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter" mode={mode} />} />
-            <Route path="/about" element={<About mode={mode}/>} />
+            <Route
+              path="/"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Try TextUtils - Word Counter, Character Counter"
+                  mode={mode}
+                />
+              }
+            />
+            <Route path="/about" element={<About mode={mode} />} />
           </Routes>
-          </div>
+        </div>
       </Router>
     </>
   );
